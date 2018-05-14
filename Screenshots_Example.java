@@ -16,7 +16,7 @@ public class Screenshots_Example {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.gecko.driver", "F:\\Selenium\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "F:\\Selenium\\geckodriver.exe"); //*Provide path of geckodriver on your system
 		driver = new FirefoxDriver();
 		driver.get("https://hdfcbank.com/");
 		driver.manage().window().maximize();
@@ -34,7 +34,7 @@ public class Screenshots_Example {
 		TakesScreenshot objScreenshot = ((TakesScreenshot)driver);
 		File objSrcFile =objScreenshot.getScreenshotAs(OutputType.FILE);
 		
-		File objDestFile = new File("F:\\Selenium\\Snapshots\\" + filename + ".jpg");
+		File objDestFile = new File("F:\\Selenium\\Snapshots\\" + filename + ".jpg"); //* Provide any path on your system.
 		
 		FileUtils.copyFile(objSrcFile,objDestFile);
 		
